@@ -1,0 +1,27 @@
+<app-home></app-home>
+   <div class="container">
+    <h2>Session List</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Course</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Location</th>
+          <th>Instructor</th>
+        </tr>
+       
+      </thead>
+      <tbody *ngFor="let session of sessions">
+        <tr>
+          
+          <td>python</td>
+          <td>{{ session.date | date }}</td>
+          <td>{{ session.time }}</td>
+          <td>{{ session.location }}</td>
+          <td>{{ session.instructor }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

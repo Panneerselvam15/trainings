@@ -1,0 +1,39 @@
+
+<app-home></app-home>
+
+  <div class="container">
+    <h2>Session Management</h2>
+    <form #myform (ngSubmit)="onSubmit(myform)">
+      
+      <div class="form-group">
+        <label for="course">Course</label>
+        <select type="text" [(ngModel)]="session.course" id="course" name="course" class="form-control">
+          <option value="Python">Python</option>
+          <option value="Java">Java</option>
+          <option value="Embedded">Embedded</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" [(ngModel)]="session.date" id="date" name="date" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="time">Time</label>
+        <input type="time" [(ngModel)]="session.time" id="time" name="time" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" [(ngModel)]="session.location" id="location" name="location" class="form-control" placeholder="Enter Location">
+      </div>
+      <div class="form-group">
+        <label for="instructor">Instructor</label>
+        <select [(ngModel)]="session.instructor" id="instructor" name="instructor" class="form-control" placeholder="Enter Instructor">
+          <option value="Ram">Ram</option>
+          <option value="samuvel">Samuvel</option>
+          <option value="sanjay">Sanjay</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Create Sessions</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,23 @@
+<app-home></app-home>
+   <div class="container">
+    <h2>Enrollment and Attendance Tracking</h2>
+    <form [formGroup]="enrollmentForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="participantId">Participant ID</label>
+        <input type="number" formControlName="participantId" id="participantId" class="form-control" placeholder="Enter Participant ID">
+      </div>
+      <div class="form-group">
+        <label for="sessionDate">Session Date</label>
+        <input type="date" formControlName="sessionDate" id="sessionDate" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="attendanceStatus">Attendance Status</label>
+        <select formControlName="attendanceStatus" id="attendanceStatus" class="form-control">
+          <option value="present">Present</option>
+          <option value="absent">Absent</option>
+          <option value="excused">Excused</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
